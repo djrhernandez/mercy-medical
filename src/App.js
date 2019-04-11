@@ -1,26 +1,45 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import './App.css'
+/*	BrowserRouter for servers that respond to requests
+		HashRouter if using a static file server
+			- Both will create a special HISTORY object
+*/
+
+function Main() {
+	return <h2>Home</h2>;
+}
+function Profile() {
+	return <h2>Profile</h2>;
+}
+function Appts() {
+	return <h2>Appointments</h2>;
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+			<React.Fragment>
+	      <div className="App">
+					<Router>
+						<div>
+							<nav>
+								<ul>
+									<li><Link to="/">Home</Link></li>
+									<li><Link to="/profile/">Profile</Link></li>
+									<li><Link to="/apptmts/">Appointments</Link></li>
+								</ul>
+							</nav>
+							<Route path="/" exact component={Main}/>
+							<Route path="/profile/" component={Profile}/>
+							<Route path="/apptmts/" component={Appts}/>
+						</div>
+					</Router>
+	        <div className='container-fluid py-3'>
+
+					</div>
+	      </div>
+			</React.Fragment>
     );
   }
 }
