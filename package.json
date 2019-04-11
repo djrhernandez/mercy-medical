@@ -1,6 +1,6 @@
 {
 	"homepage": "https://djrhernandez.github.io/mercy-medical",
-  "name": "Mercy Medical Clinic",
+  "name": "mercy-medical",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
