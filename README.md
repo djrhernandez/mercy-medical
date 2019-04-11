@@ -1,5 +1,5 @@
-### Mercy Medical
-A migration of a clinical management database from PHP to React
+## Mercy Medical
+A migration of a clinical management database from PHP to React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
